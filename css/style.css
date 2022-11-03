@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.full__text {
+  font-size: 40px;
+  font-weight: 500;
+}
+.type {
+  position: relative;
+}
+.type::after {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: 3px;
+  right: -20px;
+  animation: myani 0.7s ease infinite;
+}
+@keyframes myani {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
