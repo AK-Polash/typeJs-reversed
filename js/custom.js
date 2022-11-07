@@ -1,18 +1,26 @@
 let type = document.querySelectorAll(".type");
 let typeArr = Array.from(type);
 let currentIndex;
+// let a;
+
+// function myFu(x) {
+//   a = typeArr[x].dataset.names.split(", ");
+//   console.log(a);
+// }
 
 typeArr.map((item, index) => {
-  let text = typeArr[index].innerHTML;
+  // myFu(index);
+  let text = item.innerHTML;
   let textArr;
   let count = 0;
   let runOneTime = true;
   item.innerHTML = "";
-  console.log(currentIndex);
+  console.log("ami bahire", currentIndex);
   // eikhane "currentIndex" undefined dekhay kano...? "post_share" project e same way te currentIndex ke globaly scope korsilam tokhon kaj korsilo
 
   window.addEventListener("scroll", () => {
     currentIndex = index;
+    console.log("ami vitore", currentIndex);
     let viewPort = typeArr[index].getBoundingClientRect();
 
     if (isInViewPort() && runOneTime) {
